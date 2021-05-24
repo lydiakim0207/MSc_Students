@@ -3,8 +3,20 @@
 #https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
 
 #Installation on own student profile
+#https://bioconda.github.io/user/install.html#set-up-channels .
 
 
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+sh Miniconda3-latest-MacOSX-x86_64.sh 
+
+#requirement of conda channels
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+then i used the standard code to intsall metaphlan
+$ conda install -c bioconda python=3.7 metaphlan
+
+#download relevant database in corrected location
 #Opening database fastq
 
 #SBATCH --job-name=untar_myfile
